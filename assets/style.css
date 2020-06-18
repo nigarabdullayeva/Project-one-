@@ -1,0 +1,19 @@
+body{
+    background-color:#FFFAF0
+
+}
+
+
+
+#index-banner {
+    background-image: url(img/burke-landing_media-filming-policy.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}   
+#backgroundImage{
+    position:center;
+    width:70%;
+    height:50%;
+
+}
