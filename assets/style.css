@@ -4,7 +4,7 @@ body{
 }
 
 footer {
-    background-color:#630C1C;
+    background-color: #26a69a;
     position: relative;
     left: 0;
     bottom: 0;
@@ -20,25 +20,36 @@ a {
 }
 
 #appName{ 
-    color: #630C1C;
+    color: #FFFAF0;
     text-align: center;
 }
 #index-banner {
-    background-image: url(img//burke-landing_media-filming-policy.jpg);
+    background: linear-gradient(
+     rgba(0, 0, 0, 0.60), 
+      rgba(0, 0, 0, 0.60)
+      ), url(img//background-1.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
 }   
-#imageTwo {
-    background-image: url(img/burke-landing_media-filming-policy.jpg);
-    background-repeat: no-repeat;
-    background-position: inherit;
-    background-size:cover;
+.index-banner-two{
+
+    background: linear-gradient(
+     rgba(0, 0, 0, 0.20), 
+     rgba(0, 0, 0, 0.20)
+     ), url(img//background-2.jpg);
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+     height: 320px;
+     text-align: center;
+     color:  #FFFAF0;
+
 
 }
 .soundM {
     font-family: 'Dancing Script', cursive;
-    color: #630C1C;
+    color:#26a69a;
     text-align: center;
 }
 
@@ -49,7 +60,14 @@ a {
     color: #FFFAF0;
 }
 
-.material-icons {
-    color: #630C1C;
+.material-icons  {
+    color: #26a69a;
 }
 
+.btn-floating {
+    color:#26a69a; 
+    display:inline; 
+
+}
+
+ 
