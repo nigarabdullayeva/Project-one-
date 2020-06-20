@@ -3,20 +3,53 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#appName {
-    color: burlywood;
+footer {
+    background-color:#630C1C;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    padding: 1px;
+    width: 100%;
+    color: #FFFAF0;
+    text-align: center;
 }
 
+a {
+    color:#FFFAF0;
+    text-decoration: underline;
+}
+
+#appName{ 
+    color: #630C1C;
+    text-align: center;
+}
 #index-banner {
-    background-image: url(img/burke-landing_media-filming-policy.jpg);
+    background-image: url(img//burke-landing_media-filming-policy.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
 }   
-#index-banner-two {
-    background-image: url(img/euroradio_film_music_exchange.png);
+#imageTwo {
+    background-image: url(img/burke-landing_media-filming-policy.jpg);
     background-repeat: no-repeat;
     background-position: inherit;
     background-size:cover;
 
 }
+.soundM {
+    font-family: 'Dancing Script', cursive;
+    color: #630C1C;
+    text-align: center;
+}
+
+:-ms-input-placeholder{
+    color: #FFFAF0;
+}
+.searcharea {
+    color: #FFFAF0;
+}
+
+.material-icons {
+    color: #630C1C;
+}
+
