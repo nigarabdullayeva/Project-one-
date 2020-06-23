@@ -1,3 +1,6 @@
+// Shannon S.
+// Scroll down for Michael's portion
+
 $("button").on("click", function (event) {
   event.preventDefault();
   $(".title").text("");
@@ -53,5 +56,35 @@ $("button").on("click", function (event) {
       }
       console.log(playlistResponse);
     });
+  });
+
+  // Michael Z.
+  $("#movie-result").text("");
+  $("#movie-pic").text("");
+  $(".mainTitle").text("");
+  $("#year").text("");
+  $("#genre").text("");
+  $("#actors").text("");
+  $("#rating").text("");
+  $("#length").text("");
+
+  var queryURL = "http://www.omdbapi.com/?apikey=777b0d38&t=" + input;
+
+  $.ajax({
+    url: queryURL,
+    method: "GET",
+  }).then(function (response) {
+    $("#movie-result").append('<p class = "light"> ' + response.Plot + "</p>");
+    var imgUrl = response.Poster;
+    var imgPoster = $("<img>");
+    imgPoster.attr("src", imgUrl);
+    $("#movie-pic").append(imgPoster);
+    console.log(response);
+    $(".mainTitle").append(response.Title);
+    $("#year").append("Year: " + response.Year);
+    $("#genre").append("Genre: " + response.Genre);
+    $("#actors").append("Actors: " + response.Actors);
+    $("#rating").append("Rated: " + response.Rated);
+    $("#length").append("Length:" + response.Runtime);
   });
 });

@@ -67,3 +67,8 @@ a {
   color: #26a69a;
   display: inline;
 }
+
+.facts {
+  position: relative;
+  left: 80px !important;
+}
