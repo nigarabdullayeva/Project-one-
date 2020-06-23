@@ -1,7 +1,8 @@
 $("button").on("click", function (event) {
   event.preventDefault();
-  $("#titles").text("");
+  $(".title").text("");
   $("#vid").text("");
+  $("#songs").text("");
   var apiKey = "AIzaSyCwTQ5femqWfTJs-WH8WSRY4DT56Eydb9Y";
 
   var input = $(".searcharea").val();
