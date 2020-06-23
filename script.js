@@ -1,8 +1,9 @@
 $("button").on("click", function (event) {
   event.preventDefault();
-  $("#titles").text("");
+  $(".title").text("");
   $("#vid").text("");
-  var apiKey = "AIzaSyCwTQ5femqWfTJs-WH8WSRY4DT56Eydb9Y";
+  $("#songs").text("");
+  var apiKey = "AIzaSyDdGdXoEqADclmem8-3rtqWYNqdFpxvOnQ";
 
   var input = $(".searcharea").val();
 
@@ -21,12 +22,11 @@ $("button").on("click", function (event) {
     $(".title").append(response.items[0].snippet.title);
 
     var vidURL =
-      "https://www.googleapis.com/youtube/v3/playlists?part=player&part=snippet&part=contentDetails&id=" +
+      "https://www.googleapis.com/youtube/v3/playlists?part=player&part=contentDetails&id=" +
       playlistId +
       "&key=" +
       apiKey;
-    // fix limit
-    // "maxResults="+
+    // &part=snippet
     $.ajax({
       url: vidURL,
       method: "GET",
@@ -36,7 +36,7 @@ $("button").on("click", function (event) {
     });
 
     var songListURL =
-      "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&&maxResults=25&part=contentDetails&playlistId=" +
+      "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=25&part=contentDetails&playlistId=" +
       playlistId +
       "&key=" +
       apiKey;
