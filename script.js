@@ -12,7 +12,7 @@ $("button").on("click", function (event) {
   $("#rating").text("");
   $("#length").text("");
 
-  var queryURL = "http://www.omdbapi.com/?apikey=trilogy&t=" + title;
+  var queryURL = "https://www.omdbapi.com/?apikey=trilogy&t=" + title;
 
   $.ajax({
     url: queryURL,
