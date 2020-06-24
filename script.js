@@ -12,7 +12,7 @@ $("button").on("click", function (event) {
   $("#rating").text("");
   $("#length").text("");
 
-  var queryURL = "http://www.omdbapi.com/?apikey=777b0d38&t=" + title;
+  var queryURL = "http://www.omdbapi.com/?apikey=trilogy&t=" + title;
 
   $.ajax({
     url: queryURL,
@@ -38,7 +38,7 @@ $("button").on("click", function (event) {
     $(".title").text("");
     $("#vid").text("");
     $("#songs").text("");
-    var apiKey = "AIzaSyDdGdXoEqADclmem8-3rtqWYNqdFpxvOnQ";
+    var apiKey = "AIzaSyAZf_kWTPJwa5at0iU-QA0j8DDbxor0_Sk";
 
     var playlistIdURL =
       "https://www.googleapis.com/youtube/v3/search?order=viewcount&part=snippet&q=" +
