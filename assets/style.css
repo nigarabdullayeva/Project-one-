@@ -43,7 +43,7 @@ a {
 
 .results {
   margin-top: 20px;
-  border-bottom: 3px solid #26a69a;
+  
 }
 
 .soundM {
@@ -59,7 +59,7 @@ a {
   color: #fffaf0;
 }
 
-.material-icons {
+.material-icons, h3 {
   color: #26a69a;
 }
 
@@ -68,7 +68,4 @@ a {
   display: inline;
 }
 
-.facts {
-  position: relative;
-  left: 80px !important;
-}
+
