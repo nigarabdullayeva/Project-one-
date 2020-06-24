@@ -1,6 +1,6 @@
 $("button").on("click", function (event) {
   event.preventDefault();
-  var input = $(".searcharea").val();
+  var title = $(".searcharea").val();
 
   // Michael Z. (scroll down for Shannon's portion)
   $("#movie-result").text("");
@@ -12,7 +12,7 @@ $("button").on("click", function (event) {
   $("#rating").text("");
   $("#length").text("");
 
-  var queryURL = "http://www.omdbapi.com/?apikey=777b0d38&t=" + input;
+  var queryURL = "http://www.omdbapi.com/?apikey=777b0d38&t=" + title;
 
   $.ajax({
     url: queryURL,
@@ -24,8 +24,10 @@ $("button").on("click", function (event) {
     imgPoster.attr("src", imgUrl);
     $("#movie-pic").append(imgPoster);
     console.log(response);
-    $(".mainTitle").append(response.Title);
-    $("#year").append("Year: " + response.Year);
+    var title = response.Title;
+    var year = response.Year;
+    $(".mainTitle").append(title);
+    $("#year").append("Year: " + year);
     $("#genre").append("Genre: " + response.Genre);
     $("#actors").append("Actors: " + response.Actors);
     $("#rating").append("Rated: " + response.Rated);
@@ -40,9 +42,9 @@ $("button").on("click", function (event) {
 
     var playlistIdURL =
       "https://www.googleapis.com/youtube/v3/search?order=viewcount&part=snippet&q=" +
-      input +
-      response.Year +
-      "movie%20soundtrack&type=playlist&key=" +
+      title +
+      year +
+      "%20movie%20soundtrack&type=playlist&key=" +
       apiKey;
 
     $.ajax({
@@ -58,11 +60,12 @@ $("button").on("click", function (event) {
         playlistId +
         "&key=" +
         apiKey;
-      // &part=snippet
+
       $.ajax({
         url: vidURL,
         method: "GET",
       }).then(function (playlistVid) {
+        console.log(playlistVid);
         $("#vid").append(playlistVid.items[0].player.embedHtml);
       });
 
@@ -76,6 +79,7 @@ $("button").on("click", function (event) {
         url: songListURL,
         method: "GET",
       }).then(function (playlistResponse) {
+        console.log(playlistResponse);
         var length = playlistResponse.pageInfo.totalResults;
         for (var i = 0; i < length; i++) {
           $("#songs").append(
