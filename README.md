@@ -16,8 +16,8 @@ Criterias that our team followed:
 <img width="1505" alt="Screen Shot 2020-06-23 at 9 29 29 PM" src="https://user-images.githubusercontent.com/63271349/85491375-07943a80-b599-11ea-85d1-027a96ff0ac1.png">
 
 ### API that we used for this project :
-* https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js
-* https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
+* OMDb API
+* Goggle API (youtube)
 
 
 ### CSS formats :
