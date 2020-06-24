@@ -66,7 +66,9 @@ $("button").on("click", function (event) {
         method: "GET",
       }).then(function (playlistVid) {
         console.log(playlistVid);
-        $("#vid").append(playlistVid.items[0].player.embedHtml);
+        $("#vid").append(
+          playlistVid.items[0].player.embedHtml.replace("http:", "https:")
+        );
       });
 
       var songListURL =
