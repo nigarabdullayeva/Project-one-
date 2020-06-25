@@ -38,7 +38,7 @@ $("button").on("click", function (event) {
     $(".title").text("");
     $("#vid").text("");
     $("#songs").text("");
-    var apiKey = "AIzaSyAZf_kWTPJwa5at0iU-QA0j8DDbxor0_Sk";
+    var apiKey = "AIzaSyBuTxDLBj2tZR-4sAHR2HGhrUsaJLbbC0w";
 
     var playlistIdURL =
       "https://www.googleapis.com/youtube/v3/search?order=viewcount&part=snippet&q=" +
